@@ -1,0 +1,123 @@
+body{
+    background-image: url("fondoYLogo/fondo.jpg");
+    background-repeat: repeat;
+}
+
+h1{color: hsl(34, 75%, 13%);
+  font-size: 6vw;
+  text-align: center;
+}
+
+.h1{width: 90%;
+  padding: 5%;
+  float: center;
+  background-color:rgba(129, 102, 51, 0.767);
+  margin: .5em auto;
+  border: rgba(129, 102, 51, 0.767); 
+  border-radius: 20px}
+
+
+h1.principal{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(129, 102, 51);
+  font-size: 8vw;
+  transition: text-shadow .5s ease; 
+  text-shadow: -.01rem .01rem 0 hsl(41, 80%, 18%), /* Una sombrita para que el título se vea mejor*/
+  -.03rem .03rem 0 hsl(41, 84%, 19%),
+  -.05rem .05rem 0 hsl(41, 85%, 21%),
+  -.07rem .07rem 0 hsl(41, 83%, 24%),
+  -.09rem .09rem 0 hsl(41, 78%, 27%),
+  -.11rem .11rem 0 hsl(41, 82%, 30%),
+  -.13rem .13rem 0 hsl(41, 80%, 31%),
+  -.15rem .15rem 0 hsl(41, 80%, 34%),
+  -.17rem .17rem 0 hsl(41, 78%, 35%),
+  -.19rem .19rem 0 hsl(41, 82%, 45%),
+  -.11rem .11rem 0 hsl(41, 93%, 52%),
+  -.21rem .21rem 0 hsl(39, 100%, 53%),
+  -.23rem .23rem 20px hsl(41, 90%, 100%)
+  
+}
+
+
+div.logo{
+    text-align: center;
+  }
+
+img.logo{width: 20% ;}
+  
+
+aside {
+  width: 30%;
+  padding-top: 5%;
+  padding-left: 20%px;
+  margin-left: 20%;
+  float: right;
+  font-style: italic;
+  background-color: rgba(253, 170, 212, 0.61);
+}
+aside h2{  font-size: 4vw;
+  color: hsl(325, 77%, 26%)}
+
+
+.rosita {background-color: rgba(253, 170, 211, 0.877); /* Los comentarios con un fondo del mismo color que el formulario pero menos transparente (js)*/
+width:60%;
+padding: 4%;
+margin-left: 4%;
+margin-top: 2%;}
+
+.edad{text-decoration: underline ;}
+
+@media screen and (max-width: 600px){font-size: 2;}
+
+/* Info osos*/
+
+.papi { /* De hecho podría quitar esta class*/
+  width: 100%;
+
+}
+
+.hijo {
+  width: 90%;
+  padding: 10%;
+  float: center;
+  background-color:rgba(253, 170, 211, 0.877);
+  margin: .5em auto;
+  border: rgba(253, 170, 211, 0.877); 
+  border-radius: 20px;
+
+}
+
+.hijo h2{text-align: center;
+      float:center;}
+
+.hijoCenter { /* quiero que las fotos estén centradas pero el texto justificado, me he inventado una clase*/
+  width: 90%;
+  padding: 10%;
+  float: center;
+  background-color:rgba(253, 170, 211, 0.877);
+  margin: .5em auto;
+  border: rgba(253, 170, 211, 0.877); 
+  border-radius: 20px;
+  text-align: center;
+
+}
+
+img { /* img responsive*/
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 80%;
+}
+
+.footer { /* footer dividido en 2 para tener 2 columnas centradas*/
+
+  width: 50%;
+  padding: 1em;
+  color: rgb(180, 142, 70);
+  background-color: rgb(66, 52, 27);
+  float: left;
+  text-align: center;
+}
+
+
+
+

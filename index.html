@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="pagina.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class='logo'>
+            <h1 class=principal>Ositos de Berta</h1>
+            <img class=logo src="fondoYLogo/osito.png"></a>
+        </div>
+
+        <nav class="menuRpsv" id="menu">
+            <a href="#" class="active">Home</a>
+            <a href="info.html">Info</a>
+            <a href="fotos.html">Fotos</a>
+            <a href="javascript:void(0);" class="icon" onclick="menuEnPantallaPeque()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <aside>
+        <h2>Caja de comentarios</h2>
+        <form name="comentarios">
+            <div class="form-row align-items-center">
+                <div class="col-auto">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre de usuario" />
+                </div>
+                <div class="col-auto">
+                    <input type="number" name="edad" id="edad" placeholder="Edad" min="0" />
+                </div>
+            </div>
+            <br>
+            <div class="form-row align-items-center">
+                <div class="col-auto">
+                    <textarea name="comentario" id="comentario" form="comentarios"
+                        maxlength="35" onclick="borrarTextoDefault(this)">Escriba aquí su comentario...</textarea>
+                </div>
+            </div>
+            <br />
+            <span class="guardar">
+                <input type="submit" value="Guardar" class="btn btn-light" />
+            </span>
+            <span class="añadir">
+                <input type="button" value="Añadir" onclick="añadirComentario()" class="btn btn-light" />
+            </span>
+            <span class="reset">
+                <input type="button" value="Reset" onclick="reset()" class="btn btn-light" />
+            </span>
+
+        </form>
+    </aside>
+
+<main>
+    <section id="outputComentario">
+    </section>
+
+</main>
+
+<script async defer>
+    function menuEnPantallaPeque() {
+        var x = document.getElementById("menu");
+        if (x.className === "menuRpsv") {
+            x.className += " responsive";
+        } else {
+            x.className = "menuRpsv";
+        }
+    }
+    function añadirComentario() { //cojo los valores del comentario, nombre y edad
+    var comentario = document.getElementById("comentario").value;
+    var nombre = document.forms["comentarios"]["nombre"].value
+    var edad = document.forms["comentarios"]["edad"].value
+    if(comentario =="" || nombre =="" || edad == ""){ //validamos que los campos no estén vacíos
+    alert("Por favor, rellene todos los campos!");
+}else{ //añado hijos al div para caja de comentarios
+    var divComentario = document.getElementById("outputComentario")
+    var h5Nombre = divComentario.appendChild( document.createElement('h5'))
+    var h7Edad = divComentario.appendChild( document.createElement('h7'))
+    var pComentario= divComentario.appendChild( document.createElement('p'))
+    var spanComentario = divComentario.appendChild( document.createElement('span'))
+
+    divComentario.className = "rosita"
+
+    h7Edad.className  = "edad" //le creo una clase porque lo subrayaré para diferenciarlo del párrafo
+
+    h5Nombre.innerHTML = nombre
+    h7Edad.innerHTML = edad + " años"
+    pComentario.innerHTML = comentario
+}
+
+
+}
+
+function reset(){
+    document.forms["comentarios"]["nombre"].value = ""
+    document.forms["comentarios"]["edad"].value = ""
+    borrarTextArea();
+}
+
+function borrarTextoDefault(textArea){
+var isDefault = (textArea.value  == "Escriba aquí su comentario...") ? (borrarTextArea()) : none}
+
+function borrarTextArea(){document.getElementById("comentario").value = "";}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="pagina.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class='logo'>
+            <h1 class=principal>Ositos de Berta</h1>
+            <img class=logo src="fondoYLogo/osito.png"></a>
+        </div>
+
+        <nav class="menuRpsv" id="menu">
+            <a href="#" class="active">Fotos</a>
+            <a href="index.html">Home</a>
+            <a href="info.html">Info</a>
+            <a href="javascript:void(0);" class="icon" onclick="menuEnPantallaPeque()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+
+    <main>
+    </div>
+    <div class="papi">
+        <div class="h1"> <h1>Fotos de osos</h1></div>
+
+      <div class="hijoCenter">
+          <h2>Oso panda</h2>
+          <img alt="Oso panda" src="fotosOsos/osoPanda.jpg">
+          
+      </div>
+      <div class="hijoCenter">
+        <h2>Oso polar</h2>
+        <img alt="Oso polar" src="fotosOsos/osoPolar.jpg">     
+      </div>
+    </div>
+    <div class="hijoCenter">
+      <h2>Oso pardo</h2>
+      <img alt="Oso pardo" src="fotosOsos/osoPardo.jpg">   
+
+     
+    </div>
+
+    </div>
+    
+    </main>
+    <footer>
+        <div class="footer">
+          <p>Berta Vergés Rodríguez</p>
+        </div>
+              <div class="footer">
+          <p>bverges@cifpfbmoll.eu</p>
+        </div>
+      </footer>
+    <script async defer>
+    function menuEnPantallaPeque() {
+        var x = document.getElementById("menu");
+        if (x.className === "menuRpsv") {
+            x.className += " responsive";
+        } else {
+            x.className = "menuRpsv";
+        }
+    }
+
+    </script>
+
+</body>
+
+</html>

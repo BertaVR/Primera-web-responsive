@@ -1,0 +1,82 @@
+/* Para hacer el menú responsive me he inspirado mucho en este post: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+
+
+.menuRpsv {/* Quiero un menú centrado para pantallas grandes */
+  background-color: rgb(66, 52, 27);
+  overflow: hidden;
+  text-align: center;
+}
+
+.menuRpsv a {
+  float: none;
+  display: inline-block;
+  color: rgb(180, 142, 70);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.menuRpsv a:hover {/* Que invierta los colores al pasar por encima */
+  background-color: rgb(180, 142, 70);
+  color: rgb(66, 52, 27);
+  font-weight: bold;
+}
+
+.menuRpsv a.active {/* Con un color diferente para la página activa */
+  background-color: #e94086;
+  color: rgb(255, 255, 255);
+}
+
+.menuRpsv .icon { /* La página grande no tiene icono para desplegar */
+  display: none;
+}
+
+@media screen and (max-width: 600px) { /* Para páginas pequeñas barra más estrechita, alineada a la izquierda e icono de menú (con JS) */
+  .menuRpsv a:not(:first-child) {
+    display: none;
+  }
+  .menuRpsv a.icon {
+    float: right;
+    display: block;
+  }
+  .menuRpsv a {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .menuRpsv a.active {
+    float: left;
+    display: inline;
+    margin-right: 0%;
+    width: 20%;
+    margin-left: 0%;
+  }
+  .menuRpsv ul li {
+    float: left;
+  }
+}
+
+@media screen and (max-width: 800px){  /* Para pantallas no tan grandes ni tan pequeñas dejo el menú horizontal pero también más pequeñito*/
+    .menuRpsv a { 
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+@media screen and (max-width: 600px) { /* características para cuando pulsas icono de menú (JS)*/
+  .menuRpsv.responsive {
+    position: relative;
+  }
+  .menuRpsv.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .menuRpsv.responsive a {
+    text-align: center;
+    display: block;
+    margin-left: 20%;
+  }
+  .menuRpsv.responsive a.active {
+    margin-left: 0%;
+  }
+}
