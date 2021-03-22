@@ -1,5 +1,5 @@
 # Primera-web-responsive
-Este proyecto se trata de un sitio web sencillo y responsive para un ejercicio de la asignatura de Lenguajes de Marcas.
+Este proyecto se trata de un sitio web sencillo y responsive para un ejercicio de la asignatura de Lenguajes de Marcas. El contenido de info es información copiada de  [Wikipedia](https://en.wikipedia.org/wiki/Bear) ya que el objetivo de el ejercicio se centraba en aprender aspectos relativos al formato de la web (el contenido no es importante).
 
 ## Requerimientos del ejercicio
 
