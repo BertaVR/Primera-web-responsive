@@ -16,3 +16,7 @@ Crea una web con diseño web adaptable (responsive). La página debe tener una p
 - El comentario del formulario se debe añadir por ejemplo dentro de una sección de comentarios que crearás en la página inicial.
 - El formulario debe tener el botón de submit, un botón de reset y un botón que permita añadir los comentarios en la web.
 - Se valorará un buen estilo de la web para todas las resoluciones de pantalla.
+
+## Enlace
+
+https://bertavr.github.io/Primera-web-responsive/
