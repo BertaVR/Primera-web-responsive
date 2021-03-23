@@ -73,11 +73,9 @@
 <script async defer>
     function menuEnPantallaPeque() {
         let menu = document.getElementById("menu");
-        if (menu.className == "menuRpsv") {
-            menu.className += " responsive";
-        } else {
-            menu.className = "menuRpsv";
-        }
+        let isMenuResponsive = menu.className == "menuRpsv" ? menu.className += " responsive" : menu.className = "menuRpsv"
+
+        
     }
     function añadirComentario() { //cojo los valores del comentario, nombre y edad
     let comentario = document.getElementById("comentario").value;
@@ -112,7 +110,7 @@ function resetear(){
 }
 
 function borrarTextoDefault(textArea){
-let isDefault = (textArea.value  == "Escriba aquí su comentario...") ? (borrarTextArea()) : none}
+let isDefault = textArea.value  == "Escriba aquí su comentario..." ? borrarTextArea() : none}
 
 function borrarTextArea(){document.getElementById("comentario").value = "";}
 
