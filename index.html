@@ -86,7 +86,7 @@
     let edad = document.forms["comentarios"]["edad"].value
 
     if(comentario =="" || nombre =="" || edad == ""){ //validamos que los campos no estén vacíos
-    swal("Oops","Si no rellena todos los campos no puede enviar su comentario", "error" );
+    swal("Oops","Si no rellena todos los campos no puede enviar su comentario.", "error" );
 }else{ //añado hijos al div para caja de comentarios
     let divComentario = document.getElementById("outputComentario")
     let h5Nombre = divComentario.appendChild( document.createElement('h5'))
