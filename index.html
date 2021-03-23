@@ -58,7 +58,7 @@
                 <input type="button" value="Añadir" onclick="añadirComentario()" class="btn btn-light" />
             </span>
             <span class="reset">
-                <input type="button" value="Reset" onclick="reset()" class="btn btn-light" />
+                <input type="button" value="Reset" onclick="resetear()" class="btn btn-light" />
             </span>
 
         </form>
@@ -103,11 +103,11 @@
 
 
 }
+//El método se llama "resetear" y no reset, porque si le llamo reset lo detecta y no me deja borrar el text area
+function resetear(){ 
+    document.forms["comentarios"].reset()
+    borrarTextArea()
 
-function reset(){
-    document.forms["comentarios"]["nombre"].value = ""
-    document.forms["comentarios"]["edad"].value = ""
-    borrarTextArea();
 }
 
 function borrarTextoDefault(textArea){
