@@ -72,25 +72,26 @@
 
 <script async defer>
     function menuEnPantallaPeque() {
-        var x = document.getElementById("menu");
-        if (x.className === "menuRpsv") {
-            x.className += " responsive";
+        let menu = document.getElementById("menu");
+        if (menu.className == "menuRpsv") {
+            menu.className += " responsive";
         } else {
-            x.className = "menuRpsv";
+            menu.className = "menuRpsv";
         }
     }
     function añadirComentario() { //cojo los valores del comentario, nombre y edad
-    var comentario = document.getElementById("comentario").value;
-    var nombre = document.forms["comentarios"]["nombre"].value
-    var edad = document.forms["comentarios"]["edad"].value
+    let comentario = document.getElementById("comentario").value;
+    let nombre = document.forms["comentarios"]["nombre"].value
+    let edad = document.forms["comentarios"]["edad"].value
+
     if(comentario =="" || nombre =="" || edad == ""){ //validamos que los campos no estén vacíos
     alert("Por favor, rellene todos los campos!");
 }else{ //añado hijos al div para caja de comentarios
-    var divComentario = document.getElementById("outputComentario")
-    var h5Nombre = divComentario.appendChild( document.createElement('h5'))
-    var h7Edad = divComentario.appendChild( document.createElement('h7'))
-    var pComentario= divComentario.appendChild( document.createElement('p'))
-    var spanComentario = divComentario.appendChild( document.createElement('span'))
+    let divComentario = document.getElementById("outputComentario")
+    let h5Nombre = divComentario.appendChild( document.createElement('h5'))
+    let h7Edad = divComentario.appendChild( document.createElement('h7'))
+    let pComentario= divComentario.appendChild( document.createElement('p'))
+    let spanComentario = divComentario.appendChild( document.createElement('span'))
 
     divComentario.className = "rosita"
 
@@ -98,7 +99,7 @@
 
     h5Nombre.innerHTML = nombre
     h7Edad.innerHTML = edad + " años"
-    pComentario.innerHTML = comentario
+    pComentario.innerHTML = comentario //introducir el valor del comentario en el párrafo destinado a eso
 }
 
 
@@ -111,7 +112,7 @@ function resetear(){
 }
 
 function borrarTextoDefault(textArea){
-var isDefault = (textArea.value  == "Escriba aquí su comentario...") ? (borrarTextArea()) : none}
+let isDefault = (textArea.value  == "Escriba aquí su comentario...") ? (borrarTextArea()) : none}
 
 function borrarTextArea(){document.getElementById("comentario").value = "";}
 
